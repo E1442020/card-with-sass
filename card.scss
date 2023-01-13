@@ -26,6 +26,7 @@ body {
   background-color: aliceblue;
   @include breakpoints(mobile) {
     flex-direction: column;
+    margin-top: 100px;
 
     width: 90%;
   }
@@ -49,7 +50,7 @@ body {
     }
   }
   .content-container {
-    width: 60%;
+    width: 50%;
     padding-left: 10px;
     padding-bottom: 20px;
 

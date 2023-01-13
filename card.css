@@ -32,6 +32,7 @@ body {
 @media (max-width: 940px) {
   .card-container {
     flex-direction: column;
+    margin-top: 100px;
     width: 90%;
   }
 }
@@ -58,7 +59,7 @@ body {
   }
 }
 .card-container .content-container {
-  width: 60%;
+  width: 50%;
   padding-left: 10px;
   padding-bottom: 20px;
 }
