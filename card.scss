@@ -26,7 +26,7 @@ body {
   background-color: aliceblue;
   @include breakpoints(mobile) {
     flex-direction: column;
-    margin-top: 1000px;
+    margin: 500px 0px;
 
     width: 90%;
   }
