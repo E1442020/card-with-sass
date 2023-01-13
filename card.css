@@ -53,7 +53,6 @@ body {
 @media (max-width: 940px) {
   .card-container .img-container img {
     border-radius: 5px 5px 0px 0px;
-    height: 300px;
   }
 }
 .card-container .content-container {
