@@ -15,15 +15,16 @@ body, .card-container, .card-container .content-container .price-container, .car
 body {
   padding: 0;
   margin: 0;
-  background-color: rgb(132, 143, 141);
+  background-color: hsl(30deg, 38%, 92%);
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
+  font-size: 14px;
   font-family: "Montserrat", sans-serif;
 }
 @media (max-width: 940px) {
   body {
-    padding: 500px 0px;
+    padding: 480px 0px;
   }
 }
 
@@ -32,7 +33,7 @@ body {
   max-width: 500px;
   align-items: stretch;
   gap: 0px;
-  background-color: aliceblue;
+  background-color: hsl(0deg, 0%, 100%);
 }
 @media (max-width: 940px) {
   .card-container {
@@ -64,8 +65,7 @@ body {
 }
 .card-container .content-container {
   width: 50%;
-  padding-left: 10px;
-  padding-bottom: 20px;
+  padding: 25px;
 }
 @media (max-width: 940px) {
   .card-container .content-container {
@@ -74,7 +74,8 @@ body {
 }
 .card-container .content-container .product-category {
   color: gray;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
+  font-size: small;
 }
 .card-container .content-container .product-description {
   color: gray;
@@ -92,8 +93,9 @@ body {
   justify-content: left;
 }
 .card-container .content-container .price-container .new-price {
-  color: rgb(44, 94, 44);
+  color: hsl(158deg, 36%, 37%);
   font-family: "Fraunces", serif;
+  font-size: 20px;
 }
 .card-container .content-container .price-container .old-price {
   color: gray;
@@ -101,12 +103,20 @@ body {
 }
 .card-container .content-container .btn-container {
   gap: 15px;
-  background-color: rgb(44, 94, 44);
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  height: 40px;
+  font-weight: bold;
+  background-color: hsl(158deg, 36%, 37%);
   color: white;
-  margin: 0 auto;
-  padding: 0px 15px;
+  padding: 0px 25px;
   cursor: pointer;
 }
 .card-container .content-container .btn-container:hover {
   opacity: 0.7;
+}
+@media (max-width: 940px) {
+  .card-container .content-container .btn-container {
+    width: 88%;
+  }
 }/*# sourceMappingURL=card.css.map */
