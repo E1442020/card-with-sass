@@ -1,0 +1,80 @@
+@use './helper/helper' as *;
+@use './helper/media' as *;
+
+$gray-color:gray;
+$green-color:rgb(44, 94, 44);
+
+
+body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: rgb(169, 229, 223);
+    @extend %flexHelper;
+    height: 100vh;
+    width: 100vw;
+    
+
+   }
+.card-container{
+    width: calc(100% - 24px);
+    max-width: 500px;
+    @extend %flexHelper;
+    @extend %borderRadius;
+    background-color: aliceblue;
+
+    
+    .img-container{
+        width: 50%;
+        border: 1px solid red;
+       
+        
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            
+        }
+    }
+    .content-container{
+        width: 50%;
+        .product-category{
+            color: $gray-color;
+            letter-spacing: 5px;
+        }
+        .product-description{
+            color: $gray-color;
+            
+        }
+        .product-name{
+            font-weight: bold;
+        }
+        .price-container{
+            @extend %flexHelper;
+            justify-content: left;
+            .new-price{
+                color: $green-color;
+                font-size: 30px;
+                font-weight:900px;
+            }
+            .old-price{
+                color: $gray-color;
+                text-decoration: line-through;
+            }
+        }
+        .btn-container{
+            @extend %flexHelper;
+            gap: 15px;
+            background-color: $green-color;
+            color: white;
+            margin: 0 auto;
+            @extend %borderRadius;
+            padding: 0px 15px;
+            cursor: pointer;
+            &:hover{
+                opacity: .7;
+            }
+            
+        }
+    }
+}
