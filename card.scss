@@ -1,110 +1,99 @@
-@use './helper/helper' as *;
-@use './helper/media' as *;
+@use "./helper/helper" as *;
+@use "./helper/media" as *;
 
-$gray-color:gray;
-$green-color:rgb(44, 94, 44);
+$gray-color: gray;
+$green-color: rgb(44, 94, 44);
 
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
+body {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(132, 143, 141);
+  box-sizing: border-box;
+  @extend %flexHelper;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+}
+.card-container {
+  width: calc(100% - 24px);
+  max-width: 500px;
+  align-items: stretch;
+  @extend %flexHelper;
+  gap: 0px;
+  @extend %borderRadius;
+  background-color: aliceblue;
+  @include breakpoints(mobile) {
+    flex-direction: column;
 
-body{
-    padding: 0;
-    margin: 0;
-    background-color: rgb(169, 229, 223);
-    box-sizing: border-box;
-    @extend %flexHelper;
-    height: 100vh;
-    width: 100vw;
-    font-family: Montserrat;
-    
+    width: 90%;
+  }
 
-   }
-.card-container{
-    width: calc(100% - 24px);
-    max-width: 500px;
-    align-items: stretch;
-
-    @extend %flexHelper;
-    gap: 0px;
-    @extend %borderRadius;
-    background-color: aliceblue;
-    @include breakpoints(mobile){
-       flex-direction: column;
-       
-       width: 90%;
+  .img-container {
+    width: 50%;
+    display: flex;
+    @include breakpoints(mobile) {
+      width: 100%;
     }
 
-
-    
-    .img-container{
-        width: 50%;
-        display: flex;
-        @include breakpoints(mobile){
-           width: 100%;
-         }
-        
-        
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            border: none;
-        border-radius: 5px 0px 0px 5px;
-        @include breakpoints(mobile){
-            border-radius: 5px 5px 0px 0px;
-           
-          }
-            
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border: none;
+      border-radius: 5px 0px 0px 5px;
+      @include breakpoints(mobile) {
+        border-radius: 5px 5px 0px 0px;
+      }
     }
-    .content-container{
-        width: 60%;
-        padding-left: 10px;
-        padding-bottom: 20px;
-       
-        @include breakpoints(mobile){
-            width: 100%;
-           
+  }
+  .content-container {
+    width: 60%;
+    padding-left: 10px;
+    padding-bottom: 20px;
 
-          }
-        .product-category{
-            color: $gray-color;
-            letter-spacing: 5px;
-        }
-        .product-description{
-            color: $gray-color;
-            @include breakpoints(mobile){
-                width: 90%;
-             }
-            
-        }
-        .product-name{
-            font-weight: bold;
-        }
-        .price-container{
-            @extend %flexHelper;
-            justify-content: left;
-            .new-price{
-                color: $green-color;
-                font-size: 30px;
-                font-weight:900px;
-            }
-            .old-price{
-                color: $gray-color;
-                text-decoration: line-through;
-            }
-        }
-        .btn-container{
-            @extend %flexHelper;
-            gap: 15px;
-            background-color: $green-color;
-            color: white;
-            margin: 0 auto;
-            @extend %borderRadius;
-            padding: 0px 15px;
-            cursor: pointer;
-            &:hover{
-                opacity: .7;
-            }
-            
-        }
+    @include breakpoints(mobile) {
+      width: 100%;
     }
+    .product-category {
+      color: $gray-color;
+      letter-spacing: 5px;
+    }
+    .product-description {
+      color: $gray-color;
+      @include breakpoints(mobile) {
+        width: 90%;
+      }
+    }
+    .product-name {
+      font-weight: bold;
+      font-family: "Fraunces", serif;
+    }
+    .price-container {
+      @extend %flexHelper;
+      justify-content: left;
+      .new-price {
+        color: $green-color;
+        font-family: "Fraunces", serif;
+      }
+      .old-price {
+        color: $gray-color;
+        text-decoration: line-through;
+      }
+    }
+    .btn-container {
+      @extend %flexHelper;
+      gap: 15px;
+      background-color: $green-color;
+      color: white;
+      margin: 0 auto;
+      @extend %borderRadius;
+      padding: 0px 15px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
 }

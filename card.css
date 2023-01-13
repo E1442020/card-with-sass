@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap");
 body, .card-container, .card-container .content-container .price-container, .card-container .content-container .btn-container {
   display: flex;
   justify-content: center;
@@ -13,11 +15,11 @@ body, .card-container, .card-container .content-container .price-container, .car
 body {
   padding: 0;
   margin: 0;
-  background-color: rgb(169, 229, 223);
+  background-color: rgb(132, 143, 141);
   box-sizing: border-box;
   height: 100vh;
   width: 100vw;
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
 }
 
 .card-container {
@@ -79,14 +81,14 @@ body {
 }
 .card-container .content-container .product-name {
   font-weight: bold;
+  font-family: "Fraunces", serif;
 }
 .card-container .content-container .price-container {
   justify-content: left;
 }
 .card-container .content-container .price-container .new-price {
   color: rgb(44, 94, 44);
-  font-size: 30px;
-  font-weight: 900px;
+  font-family: "Fraunces", serif;
 }
 .card-container .content-container .price-container .old-price {
   color: gray;
