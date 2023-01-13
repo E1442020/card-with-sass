@@ -32,7 +32,7 @@ body {
 @media (max-width: 940px) {
   .card-container {
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 1000px;
     width: 90%;
   }
 }
