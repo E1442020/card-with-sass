@@ -21,6 +21,11 @@ body {
   width: 100vw;
   font-family: "Montserrat", sans-serif;
 }
+@media (max-width: 940px) {
+  body {
+    padding: 500px 0px;
+  }
+}
 
 .card-container {
   width: calc(100% - 24px);
@@ -32,7 +37,6 @@ body {
 @media (max-width: 940px) {
   .card-container {
     flex-direction: column;
-    margin: 500px 0px;
     width: 90%;
   }
 }
